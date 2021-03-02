@@ -120,3 +120,7 @@
     flex-direction: column;
   }
 }
+
+.borderCircle {
+  border-radius: 9999px;
+}

@@ -23,7 +23,7 @@ const Post = ({ post }) => {
           <title>
             {post.title}
           </title>
-          <meta property="og:image" content={post.ogImage || die} />
+          <meta property="og:image" content={post.ogImage} />
         </Head>
         {post.preview ? <h1 className="bg-yellow-400">preview</h1> : ''}
         <PostHeader

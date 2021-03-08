@@ -23,6 +23,8 @@ const Post = ({ post }) => {
           <title>
             {post.title}
           </title>
+          <meta property="og:url" content={`https://ksss.ink${router.asPath}`} />
+          <meta property="og:title" content={post.title} />
           <meta property="og:image" content={post.ogImage} />
         </Head>
         {post.preview ? <h1 className="bg-yellow-400">preview</h1> : ''}

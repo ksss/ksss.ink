@@ -9,6 +9,13 @@
   @apply my-4;
 }
 
+.markdown a {
+  @apply text-blue-600 underline;
+}
+.markdown a:visited {
+  @apply text-blue-900;
+}
+
 .markdown h1 {
   @apply font-bold text-4xl mt-16 mb-6 leading-snug;
 }
@@ -21,7 +28,9 @@
   @apply text-2xl my-2 leading-snug;
 }
 
-.markdown code {
-  @apply bg-gray-200 px-1;
-  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+.markdown > code {
+  @apply bg-gray-200 px-1 font-mono;
+}
+.markdown pre > code {
+  @apply text-sm rounded-sm;
 }

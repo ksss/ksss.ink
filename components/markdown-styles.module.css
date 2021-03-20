@@ -28,9 +28,9 @@
   @apply text-2xl my-2 leading-snug;
 }
 
-.markdown > code {
-  @apply bg-gray-200 px-1 font-mono;
+.markdown :not(pre) code {
+  @apply bg-gray-100 py-1 px-2 font-mono text-sm font-medium rounded;
 }
 .markdown pre > code {
-  @apply text-sm rounded-sm;
+  @apply text-sm rounded-sm rounded py-4;
 }

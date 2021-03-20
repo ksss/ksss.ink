@@ -10,7 +10,7 @@
 }
 
 .markdown a {
-  @apply text-blue-600 underline;
+  @apply text-blue-600 underline break-words;
 }
 .markdown a:visited {
   @apply text-blue-900;

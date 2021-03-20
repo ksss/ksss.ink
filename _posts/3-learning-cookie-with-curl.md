@@ -75,6 +75,19 @@ Railsのコード内で`session[:current_user_id]`を見てみると、なるほ
 
 これがCookieのプリミティブな仕組みなようだ。
 
+# CookieStore再び
+
+ここでCookieStoreの仕組みを考えると意味がわかる。
+
+idとpasswordを入力したことで得られる`user_id`みたいなアカウントを識別する値をcookieに入れたのがCookieStore。CookieStoreなら情報がクライアント側に保存されるのでDBなりが不要。
+cookieを他人に取られても、そのcookieだけを無効化することができないのが弱点。ただし、暗号鍵を変えれば全アカウントの既存のcookieを無効化はできる。
+
+他の方法として、無意味な文字列をcookieに入れて、`user_id`などの情報を別のストアに入れるのが`ActiveRecordStore`なり`MemCacheStore`。これなら1 session毎に無効化などのコントロールが可能。ただし、もちろんDBなりが必要で、データアクセスもリクエスト毎に必要。
+
+Railsのメモリにデータを乗せておくのが`CacheStore`。DBなりが不要になる代わりに、deployのたびに全ユーザーで再サインインが必要になるので小規模向けか。
+
+とスルスル理解できた。
+
 # その先へ
 
 ## curlのcookie用オプション

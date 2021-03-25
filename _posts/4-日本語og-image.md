@@ -20,6 +20,10 @@ date: '2021-03-25'
 - localのnode versionをvercelで使えるversionに揃える。今回は14.Xだった。
 - fork直後のコードが環境変数`AWS_REGION`を見てlocalなのかproductionなのか判断しているので、localで`AWS_REGION`を設定されているとproductionとして動くので `Error: Failed to launch the browser process! spawn /usr/bin/chromium-browser ENOENT` というエラーが出る。aws lambda上でchromiumを動かすコードが動いているようだ。解決策として別の環境変数を設定して、vercel上で環境変数を設定した。
 
-### 3. vercelにdeployする
+### 3. 日本語フォントを入れる
+
+[https://qiita.com/mkizka/items/f2d4836e4cfd241acccf](https://qiita.com/mkizka/items/f2d4836e4cfd241acccf) が参考になった。
+
+### 4. vercelにdeployする
 
 おわり

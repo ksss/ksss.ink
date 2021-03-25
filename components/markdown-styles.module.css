@@ -34,3 +34,14 @@
 .markdown pre > code {
   @apply text-sm rounded-sm rounded py-4;
 }
+
+.markdown ol {
+  list-style: decimal;
+}
+.markdown ul {
+  list-style: square;
+}
+.markdown ol,
+.markdown ul {
+  padding-left: 2em;
+}

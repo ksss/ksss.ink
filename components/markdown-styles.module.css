@@ -33,10 +33,10 @@
 }
 
 .markdown pre {
-  @apply bg-gray-100 p-3 rounded;
+  @apply bg-gray-100 p-3 rounded overflow-auto;
 }
 .markdown :not(pre) code {
-  @apply bg-gray-100 py-1 px-2 font-mono text-sm font-medium rounded;
+  @apply bg-gray-100 py-1 px-2 font-mono text-sm font-medium;
 }
 .markdown pre > code {
   @apply text-sm;

@@ -9,6 +9,10 @@
   @apply my-4;
 }
 
+.markdown p {
+  @apply text-gray-700;
+}
+
 .markdown a {
   @apply text-blue-600 underline break-words;
 }
@@ -28,11 +32,14 @@
   @apply text-2xl my-2 leading-snug;
 }
 
+.markdown pre {
+  @apply bg-gray-100 p-3 rounded;
+}
 .markdown :not(pre) code {
   @apply bg-gray-100 py-1 px-2 font-mono text-sm font-medium rounded;
 }
 .markdown pre > code {
-  @apply text-sm rounded-sm rounded py-4;
+  @apply text-sm;
 }
 
 .markdown ol {

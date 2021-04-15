@@ -1,59 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-    <loc>https://ksss.ink/blog/posts/8-spring-commands-ridgepole</loc>
-    <lastmod>2021-04-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    </url>
-    <url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
     <loc>https://ksss.ink/blog/posts/7-spring</loc>
     <lastmod>2021-04-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    </url>
-    <url>
+  </url>
+    
+  <url>
     <loc>https://ksss.ink/blog/posts/6-opencomm</loc>
     <lastmod>2021-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    </url>
-    <url>
+  </url>
+    
+  <url>
     <loc>https://ksss.ink/blog/posts/5-35</loc>
     <lastmod>2021-03-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    </url>
-    <url>
+  </url>
+    
+  <url>
     <loc>https://ksss.ink/blog/posts/4-日本語og-image</loc>
     <lastmod>2021-03-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    </url>
-    <url>
+  </url>
+    
+  <url>
     <loc>https://ksss.ink/blog/posts/3-learning-cookie-with-curl</loc>
     <lastmod>2021-03-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    </url>
-    <url>
+  </url>
+    
+  <url>
     <loc>https://ksss.ink/blog/posts/2-learn-in-3-months</loc>
     <lastmod>2021-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    </url>
-    <url>
+  </url>
+    
+  <url>
     <loc>https://ksss.ink/blog/posts/1-initailize</loc>
     <lastmod>2021-03-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    </url>
-    <url>
-    <loc>https://ksss.ink/blog/posts/2-mimi</loc>
-    <lastmod>undefined</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-    </url>
+  </url>
     
-    </urlset>
+</urlset>
   

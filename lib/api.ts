@@ -32,18 +32,20 @@ export function getAllPosts() {
 
 export function sitemap() {
   const urls = getAllPosts().map(post => {
-    return `<url>
+    if (post.preview) { return '' }
+    return `
+  <url>
     <loc>https://ksss.ink/blog/posts/${post.slug}</loc>
     <lastmod>${post.date}</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
-    </url>
+  </url>
     `
   }).join('')
 
   return `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    ${urls}
-    </urlset>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  ${urls}
+</urlset>
   `
 }

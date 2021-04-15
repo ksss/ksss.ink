@@ -29,3 +29,21 @@ export function getAllPosts() {
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
   return posts
 }
+
+export function sitemap() {
+  const urls = getAllPosts().map(post => {
+    return `<url>
+    <loc>https://ksss.ink/blog/posts/${post.slug}</loc>
+    <lastmod>${post.date}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+    </url>
+    `
+  }).join('')
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    ${urls}
+    </urlset>
+  `
+}

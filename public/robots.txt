@@ -1,0 +1,4 @@
+Sitemap: https://ksss.ink/sitemap
+User-agent: *
+Allow: /*
+Disallow: /api/*

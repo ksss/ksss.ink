@@ -116,3 +116,34 @@ docker-compose exec api bin/rake -T > /dev/null  0.40s user 0.09s system 30% cpu
 ```
 
 これで無駄な時間が一日5s × 100回 = 500sくらいは減るでしょう。トータルで2時間くらいかかったので15日経てばペイします。やったね。
+
+# 追記
+
+docker-compose upしてCTRL+Cで終了する運用をしていたのですが、2回に1回必ず以下のエラーが出てspring serverも立ち上がりません。
+
+```
+/api/vendor/bundle/ruby/3.0.0/gems/spring-2.1.1/lib/spring/server.rb:47:in `initialize': Address already in use - connect(2) for /tmp/spring-0/93af75a8297fc11a0f686ab9ea1fa5e3 (Errno::EADDRINUSE)
+	from /api/vendor/bundle/ruby/3.0.0/gems/spring-2.1.1/lib/spring/server.rb:47:in `open'
+	from /api/vendor/bundle/ruby/3.0.0/gems/spring-2.1.1/lib/spring/server.rb:47:in `start_server'
+	from /api/vendor/bundle/ruby/3.0.0/gems/spring-2.1.1/lib/spring/server.rb:43:in `boot'
+	from /api/vendor/bundle/ruby/3.0.0/gems/spring-2.1.1/lib/spring/server.rb:14:in `boot'
+	from /api/vendor/bundle/ruby/3.0.0/gems/spring-2.1.1/lib/spring/client/server.rb:10:in `call'
+	from /api/vendor/bundle/ruby/3.0.0/gems/spring-2.1.1/lib/spring/client/command.rb:7:in `call'
+	from /api/vendor/bundle/ruby/3.0.0/gems/spring-2.1.1/lib/spring/client.rb:30:in `run'
+	from /api/vendor/bundle/ruby/3.0.0/gems/spring-2.1.1/bin/spring:49:in `<top (required)>'
+	from /api/vendor/bundle/ruby/3.0.0/gems/spring-2.1.1/lib/spring/binstub.rb:5:in `load'
+	from /api/vendor/bundle/ruby/3.0.0/gems/spring-2.1.1/lib/spring/binstub.rb:5:in `<top (required)>'
+	from <internal:/usr/local/lib/ruby/3.0.0/rubygems/core_ext/kernel_require.rb>:85:in `require'
+	from <internal:/usr/local/lib/ruby/3.0.0/rubygems/core_ext/kernel_require.rb>:85:in `require'
+	from bin/spring:15:in `<main>'
+```
+
+おそらくバックグラウンドプロセスグループで起動しているため、docker-compose終了時にシグナルが届かず、unix domain socket fileとpid fileが残ってしまうようです。
+うまいことシグナルを届けることができればいいのですが、よく分からなかったので、`bin/spring server --background &`の直前にファイルを削除することにしました。
+
+```
+$ rm -f /tmp/spring-0/*
+$ bin/spring server --background &
+```
+
+これで毎回springの起動に成功します。やったね。

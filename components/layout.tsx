@@ -8,7 +8,7 @@ export default function Layout({ children }) {
       <div className="min-h-screen">
         <header className="px-5 text-white" style={{ background: "linear-gradient(270deg, #FFF, #000)" }}>
           <Link href="/">
-            Spectrum
+            ksss.ink
           </Link>
         </header>
         <main className="container mx-auto px-5">

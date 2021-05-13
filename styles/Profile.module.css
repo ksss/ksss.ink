@@ -1,0 +1,8 @@
+.list {
+}
+.list a {
+  @apply text-blue-600 underline break-words;
+}
+.list a:visited {
+  @apply text-blue-600 underline break-words;
+}

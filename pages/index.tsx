@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>ksss.ink</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -27,6 +27,11 @@ export default function Home() {
           <Link href="/blog">
             <a className={styles.card}>
               <h3>Blog &rarr;</h3>
+            </a>
+          </Link>
+          <Link href="/profile">
+            <a className={styles.card}>
+              <h3>Profile &rarr;</h3>
             </a>
           </Link>
         </div>

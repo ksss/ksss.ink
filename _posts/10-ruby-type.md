@@ -361,6 +361,8 @@ gem_rbs_collectionでActiveRecordのライブラリー的な型は分かるの�
 
 型定義と自動生成は、個人的に相性がいい気がしています。
 
+今あるアプリケーションコードを全く修正することなく導入できるので。
+
 ## [typeprof](https://github.com/ruby/typeprof)
 
 コードを静的解析して、実際の使われ方からrbsを自動生成するツール。

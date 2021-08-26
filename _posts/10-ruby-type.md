@@ -301,7 +301,7 @@ rbs prototype rb lib/**/*.rb > lib.rbs
 
 私は、もしかしたら型定義を最初に書く手法が今後使われるような気がしました。
 
-型定義ファースト**≪TDD(Type Driven Development)≫**の誕生です。
+型駆動開発**≪TDD(Type Driven Development)≫**の誕生です。
 
 ## 埋めきれないエラー
 

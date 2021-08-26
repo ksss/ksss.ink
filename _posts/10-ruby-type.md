@@ -80,6 +80,11 @@ return unless point
 
 # 導入方法
 
+## Rubyのversion
+
+「型はRuby3の機能でしょ」と思われがちですが、
+2.6以上であれば導入可能です。
+
 ## [Steep](https://github.com/soutaro/steep)導入
 
 ### dockerの場合

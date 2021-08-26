@@ -315,9 +315,9 @@ rbs prototype rb lib/**/*.rb > lib.rbs
 
 # ツールの説明
 
-以下はオマケとして、私の現時点での各ツールの理解です。
+以下はオマケとして、私の現時点での各ツールの私の理解です。
 
-型(rbs)を「使う人」と「書く人」によって使うツールが異なることを考慮すると、わかりやすいかもしれません。
+型(rbs)を「使う人」と「書く人」によって使うツールが異なることを考慮すると、理解しやすいかもしれません。
 
 ## [rbs](https://github.com/ruby/rbs)
 
@@ -329,7 +329,7 @@ rbs prototype rb lib/**/*.rb > lib.rbs
 ## [steep](https://github.com/soutaro/steep)
 
 rbsに基づいて、実際のRuby構文に対して型チェックをかけるツールです。
-rbsは元々steep用の構文だったとか。(要出典)
+rbsは元々steep用の構文だったとか。[出典](https://techlife.cookpad.com/entry/2020/12/09/120454)
 
 「使う人」と「書く人」両方にとって重要なツールですが、直接cliから使うことは少ないかもしれません。ほとんどはエディタを介して使うことになるからです。
 
@@ -358,6 +358,8 @@ TypeScriptで言う[DefinitelyTyped](https://github.com/DefinitelyTyped/Definite
 gem_rbs_collectionでActiveRecordのライブラリー的な型は分かるのですが、Railsアプリケーションでは自動生成されたmethodがあるのが普通です。
 
 個々のRailsアプリケーションを読み取って、それぞれのプロジェクト用のrbsを自動生成するツールがこちら。
+
+自動生成されるので「使う人」向けですね。
 
 型定義と自動生成は、個人的に相性がいい気がしています。
 
